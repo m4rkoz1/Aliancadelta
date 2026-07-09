@@ -230,16 +230,19 @@ iframe {
   height: 100%;
 }
 
-.logo-wrapper {
+.header-logo {
   height: 60px;
-  width: 60px;
-  color: var(--white);
+  width: auto;
+  display: block;
   transition: var(--transition-normal);
 }
 
-.logo-wrapper:hover {
-  color: var(--primary-light);
-  transform: scale(1.05);
+.header.scrolled .header-logo {
+  height: 50px;
+}
+
+.header-logo:hover {
+  transform: scale(1.03);
 }
 
 .nav-menu {
@@ -712,14 +715,37 @@ iframe {
   box-shadow: var(--shadow-md);
 }
 
-.client-icon {
-  font-size: 2rem;
-  color: var(--primary-color);
+.client-logo-wrapper {
+  width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  border-radius: var(--border-radius-sm);
+  background-color: var(--white);
+  padding: 10px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
   transition: var(--transition-normal);
 }
 
-.client-card:hover .client-icon {
-  color: var(--primary-light);
+.client-logo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(100%);
+  opacity: 0.85;
+  transition: var(--transition-normal);
+}
+
+.client-card:hover .client-logo-wrapper {
+  background-color: var(--white);
+}
+
+.client-card:hover .client-logo {
+  filter: grayscale(0%);
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 .client-name {
@@ -923,10 +949,17 @@ iframe {
   gap: 20px;
 }
 
-.footer-logo {
-  height: 60px;
-  width: 60px;
-  color: var(--white);
+.footer-logo-img {
+  height: 80px;
+  width: auto;
+  align-self: flex-start;
+  object-fit: contain;
+  display: block;
+  transition: var(--transition-normal);
+}
+
+.footer-logo-img:hover {
+  transform: scale(1.03);
 }
 
 .footer-desc {
