@@ -667,6 +667,7 @@ iframe {
   display: inline-flex;
   align-items: center;
   gap: 8px;
+  margin-top: auto;
 }
 
 .service-card:hover .service-link {
@@ -748,17 +749,6 @@ iframe {
   transform: scale(1.05);
 }
 
-.client-name {
-  font-family: var(--font-heading);
-  font-weight: 700;
-  font-size: 0.95rem;
-  color: var(--text-dark);
-  transition: var(--transition-normal);
-}
-
-.client-card:hover .client-name {
-  color: var(--white);
-}
 
 /* --- Contact & Location Section --- */
 .contact-section {
